@@ -44,7 +44,7 @@ export class MemberListComponent implements OnInit {
     this.loadUsers();
   }
 
-  loadUsers(){
+  loadUsers() {
     this.userService.getUsers(this.pagination.currentPage, 
       this.pagination.itemsPerPage, this.userParams)
     .subscribe((res: PaginatedResult<User[]>) => {
@@ -54,5 +54,4 @@ export class MemberListComponent implements OnInit {
       this.alertify.error(error);
     });
   }
-
 }
